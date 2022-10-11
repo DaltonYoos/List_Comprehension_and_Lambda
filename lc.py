@@ -79,3 +79,6 @@ print(double(10))
 mylist = [double(x) for x in range(10) if x%2 == 0]
 print(mylist)
 
+#having 2 arguments in the same list
+result = [x+y for x in [10,20,30] for y in [20,40,60]]
+print(result)
