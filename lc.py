@@ -52,3 +52,30 @@ print(result2)
 #find the square of all even numbers from 0 to 4
 new_range = [i*i for i in range(5) if i  % 2 ==0]
 print(new_range)
+
+#extract the numbers from the phrase below
+string = 'Hello 12345 World!'
+numbers = [x for x in string if x.isdigit()]
+print(numbers)
+
+#extract letter from a list
+
+string = 'Hello 12345 World!'
+letters = [x for x in string if x.isalpha()]
+print(letters)
+
+#find line 3 in the file test.txt
+infile = open('test.txt', 'r')
+result = [i.strip('\n') for i in infile if 'line3' in i]
+print(result)
+#i.strip removes the formatting of '\n'
+
+#using a function
+def double(x):
+    return x*2
+
+print(double(10))
+
+mylist = [double(x) for x in range(10) if x%2 == 0]
+print(mylist)
+
