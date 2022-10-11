@@ -26,7 +26,7 @@ for i in original_list:
 
 #There are 3 parts to list comprehension:
 
-#*result*  = [*transform/expression*    *iteration*         *filter*     ]
+#*result*  = [*transform/expression*    *iteration*         *filter/condition*     ]
 
 #The filter part answers the question if the item should be transformed.
 
