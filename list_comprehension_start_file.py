@@ -41,8 +41,7 @@ numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 newlist = [n for n in numbers if n > 0]
 print(newlist)
 
-
-
+print('\n')
 
 ## 2 create a list of integers which specify the length of each word in
 ## a sentence except for the word 'the'
@@ -54,6 +53,8 @@ list_of_int = [len(w) for w in words if w != 'the']
 
 print(list_of_int)
 
+print('\n')
+
 ## Given dictionary is consisted of vehicles and their weights in kilograms. 
 ## Contruct a list of the names of vehicles with weight below 5000 kilograms. 
 ## In the same list comprehension make the key names all upper case.
@@ -63,6 +64,8 @@ dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400,
 
 weight = [k.upper() for k in dict if dict[k] < 5000]
 print(weight)
+
+print('\n')
 
 ## Find all the numbers from 1 to 1000 that have a 4 in them
 
@@ -76,6 +79,8 @@ infile = infile.read()
 list_the = len([x for x in infile.split(' ') if x in ['the', 'The']])
 print(list_the)
 
+print('\n')
+
 ## Extract the numbers from the following phrase ##
 
 phrase = 'In 1984 there were 13 instances of a protest with over 1000 people attending. On average there were 15 reported injuries at each event, with about 3 or 4 that were classifled as serious per event.'
@@ -83,6 +88,6 @@ phrase = 'In 1984 there were 13 instances of a protest with over 1000 people att
 nums = [x for x in phrase.split(' ') if x.isdigit()]
 print(nums)
 
-
+print('\n')
 
 

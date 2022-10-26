@@ -15,6 +15,8 @@ print(even_numbers)
 odd_numbers = list(filter(lambda num: num %2 == 1, list1))
 print(odd_numbers)
 
+print('\n')
+
 ''' 2)
 find which days of the week have exactly 6 characters.
 '''
@@ -24,6 +26,8 @@ weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
 
 days_list = list(filter(lambda num: len(num) == 6, weekdays))
 print(days_list)
+
+print('\n')
 
 ''' 3)
 remove specific words from a given list 
@@ -39,6 +43,8 @@ Original_List = ['orange', 'red', 'green', 'blue', 'white', 'black']
 New_List = list(filter(lambda x:x!= 'orange' and x!='black', Original_List))
 print(New_List)
 
+print('\n')
+
 ''' 4)
  remove all elements from a given list present in another list
 Original lists:
@@ -51,10 +57,11 @@ Remove all elements from 'list1' present in 'list2:
 list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 list2 = [2, 4, 6, 8]
 
-#numbers_list = list(filter(lambda))
+list_numbers = list(filter(lambda x: x not in list2,list1))
+print(list_numbers)
 
 
-
+print('\n')
 
 ''' 5)
 find the elements of a given list of strings that contain specific substring using 
@@ -71,6 +78,18 @@ Elements of the said list that contain specific substring:
 []
 '''
 
+list_colors = ['red','black','white','green','orange']
+
+search1 = 'ack'
+search2 = 'abc'
+
+search_result1 = list(filter(lambda list_colors: search1 in list_colors,list_colors))
+search_result2 = list(filter(lambda list_colors: search2 in list_colors, list_colors))
+
+print(search_result1)
+print(search_result2)
+
+print('\n')
 
 ''' 6)
 check whether a given string contains a capital letter, a lower case letter, a 
@@ -79,6 +98,45 @@ number and a minimum length of 8 characters.
 useful)
 '''
 
+pass1 = 'GoPackGoGB'
+
+func = [lambda pass1: any(x.isupper() for x in pass1),lambda pass1: any(x.islower() for x in pass1),lambda pass1: len(pass1), lambda pass1: len(pass1) >= 8 ]
+
+if all(func(pass1) for func in func):
+
+    print('Correct password.')
+
+else:
+
+    print('Sorry, password is incorrect.')
+
+
+pass2 = 'gopackgogb'
+
+func = [lambda pass2: any(x.isupper() for x in pass2),lambda pass2: any(x.islower() for x in pass2),lambda pass2: len(pass2) >= 8]
+
+if all(func(pass2) for func in func):
+
+    print('Correct password.')
+
+else:
+
+    print('Sorry, password is incorrect.')
+
+
+pass3 = 'G0PackGoGB'
+
+func = [lambda pass3: any(x.isupper() for x in pass3),lambda pass3: any(x.islower() for x in pass3),lambda pass3: len(pass3) >= 8]
+
+if all(func(pass3) for func in func):
+
+    print('Correct password.')
+
+else:
+
+    print('Sorry, password is incorrect.')
+
+print('\n')
 
 ''' 7)
 Write a Python program to sort a list of tuples using Lambda.
@@ -88,3 +146,13 @@ sciences', 82)]
 # Expected Result:
 # [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
 '''
+
+scores = [('English',88),('Science',90),('Math',97),('Social Sciences',82)]
+
+scores.sort(key=lambda course:course[1])
+
+print(scores)
+
+print('\n')
+
+#I added spacers between each question to make each easier to read individually
