@@ -108,7 +108,7 @@ func = [lambda password_list: any(x.isupper() for x in password_list),lambda pas
 
 if all(func(password_list[0]) for func in func):
 
-    print('Password is Valid.')
+    print('Password is valid.')
 
 else:
 
@@ -117,7 +117,7 @@ else:
 
 if all(func(password_list[1]) for func in func):
 
-    print('Password is Valid.')
+    print('Password is valid.')
 
 else:
 
@@ -126,7 +126,7 @@ else:
 
 if all(func(password_list[2]) for func in func):
 
-    print('Password is Valid.')
+    print('Password is valid.')
 
 else:
 
