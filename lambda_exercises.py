@@ -99,42 +99,39 @@ useful)
 '''
 
 pass1 = 'GoPackGoGB'
-
-func = [lambda pass1: any(x.isupper() for x in pass1),lambda pass1: any(x.islower() for x in pass1),lambda pass1: len(pass1), lambda pass1: len(pass1) >= 8 ]
-
-if all(func(pass1) for func in func):
-
-    print('Correct password.')
-
-else:
-
-    print('Sorry, password is incorrect.')
-
-
 pass2 = 'gopackgogb'
-
-func = [lambda pass2: any(x.isupper() for x in pass2),lambda pass2: any(x.islower() for x in pass2),lambda pass2: len(pass2) >= 8]
-
-if all(func(pass2) for func in func):
-
-    print('Correct password.')
-
-else:
-
-    print('Sorry, password is incorrect.')
-
-
 pass3 = 'G0PackGoGB'
 
-func = [lambda pass3: any(x.isupper() for x in pass3),lambda pass3: any(x.islower() for x in pass3),lambda pass3: len(pass3) >= 8]
+password_list = [pass1, pass2, pass3]
 
-if all(func(pass3) for func in func):
+func = [lambda password_list: any(x.isupper() for x in password_list),lambda password_list: any(x.islower() for x in password_list),lambda password_list: any(x.isdigit() for x in password_list), lambda password_list: len(password_list) >= 8 ]
 
-    print('Correct password.')
+if all(func(password_list[0]) for func in func):
+
+    print('Password is Valid.')
 
 else:
 
-    print('Sorry, password is incorrect.')
+    print('Sorry, password is invalid.')
+
+
+if all(func(password_list[1]) for func in func):
+
+    print('Password is Valid.')
+
+else:
+
+    print('Sorry, password is invalid.')
+
+
+if all(func(password_list[2]) for func in func):
+
+    print('Password is Valid.')
+
+else:
+
+    print('Sorry, password is invalid.')
+
 
 print('\n')
 
