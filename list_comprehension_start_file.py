@@ -90,4 +90,4 @@ print(nums)
 
 print('\n')
 
-
+#Placed spacers in between each exercise question for formatting
